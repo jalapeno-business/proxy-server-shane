@@ -81,3 +81,4 @@ typings/
 
 package-lock.json
 .DS_Store
+client/dist/bundle.js
