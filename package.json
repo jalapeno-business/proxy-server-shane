@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ignore-path .gitignore .",
-    "start": "nodemon ./server/server.js"
+    "start": "webpack -p --config ./webpack.config.js & nodemon ./proxy/server.js"
   },
-  "pretest": [
+  "pre-commit": [
     "lint"
   ],
   "repository": {
@@ -23,15 +23,24 @@
   },
   "homepage": "https://github.com/jalapeno-business/proxy-server-shane#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
-    "pretest": "^1.1.0"
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "pre-commit": "^1.2.2",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0"
   }
 }
