@@ -1,5 +1,5 @@
 const path = require('path');
-// const webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: path.join(__dirname, 'client', 'src', 'index.jsx'),
@@ -39,5 +39,15 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+  devServer: {
+    contentBase: './client/dist',
+    historyApiFallback: {
+      index: 'index.html',
+    },
+    hot: true,
   },
 };

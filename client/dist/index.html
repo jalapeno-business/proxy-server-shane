@@ -3,16 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Test</title>
+  <title>FEC Demo</title>
 </head>
 
 <body>
-  <div id="reviews">
-    <h1>App goes here</h1>
-    <script src="./bundle.js"></script>
-  </div>
+  <div id="Reviews"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="http://localhost:8080/reviews.js" crossorigin></script>
+  <script>
+    ReactDOM.render(
+      React.createElement(ReviewsComponent),
+      document.getElementById('Reviews')
+    );
+  </script>
 </body>
 
 </html>
