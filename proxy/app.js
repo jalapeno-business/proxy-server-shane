@@ -4,7 +4,14 @@ const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
+app.all('/api/restaurant/reviews/*', (req, res) => res.redirect(`https://fec-reviews.herokuapp.com${req.path}`));
+app.all('/api/restaurant/info/*', (req, res) => res.redirect(`http://localhost:1177${req.path}`));
+app.all('/api/restaurant/suggestions/*', (req, res) => res.redirect(`http://localhost:1170${req.path}`));
+app.all('/api/restaurant/carousel/*', (req, res) => res.redirect(`http://localhost:8888${req.path}`));
+app.all('/api/restaurant/recommendations/*', (req, res) => res.redirect(`http://localhost:3004${req.path}`));
+
 app.use((req, res) => {
+  console.log(req.path);
   const restaurantId = req.path.slice(1).split('/')[0];
   if (restaurantId === '' || (restaurantId && Number.isInteger(+restaurantId))) {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
