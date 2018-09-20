@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.all('/api/restaurant/reviews/*', (req, res) => res.redirect(`http://localhost:1177:8080${req.path}`));
+app.all('/api/restaurant/reviews/*', (req, res) => res.redirect(`http://localhost:8080${req.path}`));
 app.all('/api/restaurant/info/*', (req, res) => res.redirect(`http://localhost:1177${req.path}`));
 app.all('/api/restaurant/suggestions/*', (req, res) => res.redirect(`http://localhost:1170${req.path}`));
 app.all('/api/restaurant/carousel/*', (req, res) => res.redirect(`http://localhost:8888${req.path}`));
