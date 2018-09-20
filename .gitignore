@@ -83,3 +83,7 @@ package-lock.json
 .DS_Store
 client/dist/bundle.js
 components
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
