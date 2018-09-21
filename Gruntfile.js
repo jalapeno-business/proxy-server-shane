@@ -16,14 +16,9 @@ module.exports = (grunt) => {
     },
     run: {
       s3: {
-        cmd: 'aws',
+        cmd: 'eb',
         args: [
-          's3',
-          'cp',
-          './client/dist/reviews.js',
-          's3://fec-zagat/',
-          '--grants',
-          'read=uri=http://acs.amazonaws.com/groups/global/AllUsers',
+          'deploy',
         ],
       },
     },
