@@ -28,12 +28,7 @@ module.exports = (grunt) => {
       },
     },
   });
-<<<<<<< HEAD
   grunt.registerTask('minify-css', ['cssmin']);
   grunt.registerTask('deploy', ['run:s3']);
-=======
-  grunt.registerTask('deploy', ['run:s3']);
-  grunt.registerTask('minify-css', ['cssmin']);
->>>>>>> fee594a31987c82f4537f6544f0c5392401ea940
   grunt.registerTask('build-deploy', ['minify-css', 'deploy']);
 };
