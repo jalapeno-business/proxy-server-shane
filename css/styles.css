@@ -1,11 +1,11 @@
-@media (min-width: 500px) {
+@media (min-width: 500) {
   .app {
     background-color: #f1f1f2;
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-rows: 314px 300px auto 500px 800px auto; */
+    grid-template-rows: auto 300px auto auto auto auto;
     grid-gap: 2em;
-    /* padding: 3em; */
+    padding: 3em;
     grid-template-areas: 
     "header"
     "zagat"
@@ -16,14 +16,14 @@
   }
 }  
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .app {
     background-color: #f1f1f2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 314px 300px 500px 800px 750px; */
+    grid-template-rows: auto 300px auto auto auto;
     grid-gap: 2em;
-    /* padding: 3em; */
+    padding: 3em;
     grid-template-areas: 
     "header header header"
     "zagat zagat sidebar"
@@ -34,26 +34,26 @@
 }
 
 
-.carousel {
+#zagat-carousel {
   grid-area: header;
 }
 
-.zagat {
+#zagat-description {
   grid-area: zagat;
 }
 
-.publication {
+#zagat-recommendations {
   grid-area: publication;
 }
 
-.info {
+#zagat-info {
   grid-area: sidebar;
 }
 
-.suggestions {
+#zagat-suggestions {
   grid-area: footer;
 }
 
-.reviews {
+#zagat-reviews {
   grid-area: reviews;
 }
