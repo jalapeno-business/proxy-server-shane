@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css" />
-  <link href="./styles.css" rel="stylesheet" type="text/css" />
-  <link href="./header.css" rel="stylesheet" type="text/css" />
+  <link href="./styles.min.css" rel="stylesheet" type="text/css" />
+  <link href="./header.min.css" rel="stylesheet" type="text/css" />
   <title>Zagat.com</title>
 </head>
 
@@ -621,22 +621,22 @@
   </div>
 </zgt>
 <div class="app">
-  <div class="info" id="Info">
+  <div class="info" id="zagat-info">
     <!-- info -->
   </div>
-  <div class="suggestions" id="Suggestions">
+  <div class="suggestions" id="zagat-suggestions">
     <!-- suggestions -->
   </div>
   <div class="zagat">
     <!-- zagat -->
   </div>
-  <div class="carousel" id="Carousel">
+  <div class="carousel" id="zagat-carousel">
     <!-- carousel -->
   </div>
-  <div class="publication" id="Publications">
+  <div class="publication" id="zagat-publications">
     <!-- publications -->
   </div>
-  <div class="reviews" id="Reviews">
+  <div class="reviews" id="zagat-reviews">
     <!-- reviews -->
   </div>
 </div>
@@ -650,23 +650,23 @@
 <script>
   ReactDOM.render(
     React.createElement(Reviews),
-    document.getElementById('Reviews')
+    document.getElementById('zagat-reviews')
   );
   ReactDOM.render(
     React.createElement(Info),
-    document.getElementById('Info')
+    document.getElementById('zagat-info')
   );
   ReactDOM.render(
     React.createElement(Suggestions),
-    document.getElementById('Suggestions')
+    document.getElementById('zagat-suggestions')
   );
   ReactDOM.render(
     React.createElement(Carousel),
-    document.getElementById('Carousel')
+    document.getElementById('zagat-carousel')
   );
   ReactDOM.render(
     React.createElement(Recommendations),
-    document.getElementById('Publications')
+    document.getElementById('zagat-publications')
   );
 </script>
 </body>
