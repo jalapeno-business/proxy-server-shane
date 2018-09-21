@@ -1,12 +1,13 @@
 module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-run');
 
   grunt.initConfig({
     cssmin: {
       target: {
         files: [{
           expand: true,
-          cwd: './public',
+          cwd: './css',
           src: ['*.css', '!*.min.css'],
           dest: './public',
           ext: '.min.css',
