@@ -15,6 +15,21 @@ module.exports = (grunt) => {
       },
     },
     run: {
+      gitAdd: {
+        cmd: 'git',
+        args: [
+          'add',
+          '.',
+        ],
+      },
+      gitCommit: {
+        cmd: 'git',
+        args: [
+          'commit',
+          '-m',
+          '"commit files for deploy"',
+        ],
+      },
       s3: {
         cmd: 'eb',
         args: [
@@ -24,6 +39,8 @@ module.exports = (grunt) => {
     },
   });
   grunt.registerTask('minify-css', ['cssmin']);
+  grunt.registerTask('gitAdd', ['run:gitAdd']);
+  grunt.registerTask('gitCommit', ['run:gitCommit']);
   grunt.registerTask('deploy', ['run:s3']);
-  grunt.registerTask('build-deploy', ['minify-css', 'deploy']);
+  grunt.registerTask('build-deploy', ['minify-css', 'gitAdd', 'gitCommit', 'deploy']);
 };
